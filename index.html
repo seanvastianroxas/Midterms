@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Multiplication Table </title>
+	<link rel="stylesheet" href="styles.css">
+	<script>
+
+	function multiplicationtable() {
+	
+	var x;
+	var y;
+	var first = document.getElementById("first").value;
+	var last = document.getElementById("last").value;
+	var multiple = document.getElementById("multiple").value;
+	var product;
+
+
+		for(x = first ; x<=last ; x++){
+
+		product = (x * multiple);
+
+		document.getElementById("show").innerHTML += first+" x "+multiple+" = "+ product +"<br>";
+
+		first++;
+		}
+  	
+}
+</script>
+</head>
+<body>
+
+	<div>
+		<input type="text" id="first" value="">
+		<input type="text" id="last" value="">
+		<input type="text" id="multiple" value="">
+		<button id="but" type="button" onclick=" multiplicationtable() ">Click Me</button>
+
+		<p id="show"></p>
+	</div>
+	
+</body>
